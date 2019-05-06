@@ -13,8 +13,7 @@ function warnNoop(publicInstance, callerName) {
   if (__DEV__) {
     const constructor = publicInstance.constructor;
     const componentName =
-      (constructor && (constructor.displayName || constructor.name)) ||
-      'ReactClass';
+      (constructor && (constructor.displayName || constructor.name)) || 'ReactClass';
     const warningKey = `${componentName}.${callerName}`;
     if (didWarnStateUpdateForUnmountedComponent[warningKey]) {
       return;
